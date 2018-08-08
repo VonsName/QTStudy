@@ -1,13 +1,17 @@
-#ifndef MYLABEL_H
+﻿#ifndef MYLABEL_H
 #define MYLABEL_H
 
-#include <QWidget>
+#include <QLabel>
 
-class MyLabel : public QWidget
+class MyLabel : public QLabel
 {
     Q_OBJECT
 public:
     explicit MyLabel(QWidget *parent = nullptr);
+protected:
+    void mousePressEvent(QMouseEvent *ev);
+    void mouseReleaseEvent(QMouseEvent *ev);
+    void mouseMoveEvent(QMouseEvent *ev);
 
 signals:
 

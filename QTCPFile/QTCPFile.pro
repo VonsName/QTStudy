@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui widgets
+QT       += core gui widgets network
 
 TARGET = QTCPFile
 TEMPLATE = app
@@ -24,13 +24,16 @@ CONFIG += c++11
 
 SOURCES += \
         main.cpp \
-        serverwidget.cpp
+        serverwidget.cpp \
+    clientwidget.cpp
 
 HEADERS += \
-        serverwidget.h
+        serverwidget.h \
+    clientwidget.h
 
 FORMS += \
-        serverwidget.ui
+        serverwidget.ui \
+    clientwidget.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

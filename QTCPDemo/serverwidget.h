@@ -1,7 +1,9 @@
-#ifndef SERVERWIDGET_H
+﻿#ifndef SERVERWIDGET_H
 #define SERVERWIDGET_H
 
 #include <QWidget>
+#include <QTcpServer>
+#include <QTcpSocket>
 
 namespace Ui {
 class ServerWidget;
@@ -15,8 +17,15 @@ public:
     explicit ServerWidget(QWidget *parent = nullptr);
     ~ServerWidget();
 
+private slots:
+    void on_pushButton_clicked();
+
+    void on_pushButton_2_clicked();
+
 private:
     Ui::ServerWidget *ui;
+    QTcpServer *server;
+    QTcpSocket *socket;
 };
 
 #endif // SERVERWIDGET_H

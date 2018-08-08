@@ -1,7 +1,8 @@
-#ifndef MAINWINDOW1_H
+﻿#ifndef MAINWINDOW1_H
 #define MAINWINDOW1_H
 
 #include <QMainWindow>
+#include "smallwidget.h"
 
 namespace Ui {
 class MainWindow1;

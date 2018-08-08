@@ -1,9 +1,9 @@
-#ifndef MYBUTTON_H
+﻿#ifndef MYBUTTON_H
 #define MYBUTTON_H
 
-#include <QWidget>
+#include <QPushButton>
 
-class MyButton : public QWidget
+class MyButton : public QPushButton
 {
     Q_OBJECT
 public:

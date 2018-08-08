@@ -24,10 +24,12 @@ CONFIG += c++11
 
 SOURCES += \
         main.cpp \
-        mainwindow1.cpp
+        mainwindow1.cpp \
+    smallwidget.cpp
 
 HEADERS += \
-        mainwindow1.h
+        mainwindow1.h \
+    smallwidget.h
 
 FORMS += \
         mainwindow1.ui

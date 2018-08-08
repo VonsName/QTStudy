@@ -1,7 +1,8 @@
-#ifndef SMALLWIDGET_H
+﻿#ifndef SMALLWIDGET_H
 #define SMALLWIDGET_H
 
 #include <QWidget>
+
 
 class smallWidget : public QWidget
 {

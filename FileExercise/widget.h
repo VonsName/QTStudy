@@ -1,4 +1,4 @@
-#ifndef WIDGET_H
+﻿#ifndef WIDGET_H
 #define WIDGET_H
 
 #include <QWidget>
@@ -14,6 +14,18 @@ class Widget : public QWidget
 public:
     explicit Widget(QWidget *parent = nullptr);
     ~Widget();
+    void writeData();
+    void readData();
+private:
+    void writeDataByTextStream();
+
+    void readDataByTextStream();
+
+    void buffWrite();
+private slots:
+    void on_btRe_clicked();
+
+    void on_btWr_clicked();
 
 private:
     Ui::Widget *ui;

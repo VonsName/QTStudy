@@ -1,7 +1,8 @@
-#ifndef WIDGET_H
+﻿#ifndef WIDGET_H
 #define WIDGET_H
 
 #include <QWidget>
+#include <QTimer>
 
 namespace Ui {
 class Widget;
@@ -15,8 +16,14 @@ public:
     explicit Widget(QWidget *parent = nullptr);
     ~Widget();
 
+private slots:
+    void on_pushButton_clicked();
+
+    void on_pushButton_2_clicked();
+
 private:
     Ui::Widget *ui;
+    QTimer *timer;
 };
 
 #endif // WIDGET_H

@@ -1,4 +1,4 @@
-#ifndef PAINTEVENT01_H
+﻿#ifndef PAINTEVENT01_H
 #define PAINTEVENT01_H
 
 #include <QWidget>
@@ -17,6 +17,13 @@ public:
 
 private:
     Ui::PaintEvent01 *ui;
+    int x;
+protected:
+    //重写绘图事件
+    void paintEvent(QPaintEvent *qe);
+private slots:
+    void on_pushButton_clicked();
+
 };
 
 #endif // PAINTEVENT01_H

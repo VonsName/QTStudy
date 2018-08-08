@@ -3,6 +3,7 @@
 #include <QtDebug>
 #include <QCompleter>
 #include <QStringList>
+#include <QMovie>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -10,9 +11,9 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    ui->btn->setText("ui");
+    //ui->btn->setText("ui");
 
-    connect(ui->btn,&QPushButton::clicked,this,&MainWindow::close);
+   // connect(ui->btn,&QPushButton::clicked,this,&MainWindow::close);
 
     QString str= ui->lineEdit->text();
     qDebug()<<str;
@@ -30,6 +31,29 @@ MainWindow::MainWindow(QWidget *parent) :
     qc->setCaseSensitivity(Qt::CaseInsensitive);
 
     ui->lineEdit->setCompleter(qc);
+
+    //设置文本内容
+    ui->labelText->setText("^^^");
+
+    //设置图片
+    ui->labelImg->setPixmap(QPixmap("://image/0.jpg"));
+    //设置适应lable大小
+    ui->labelImg->setScaledContents(true);
+
+    //设置动画 构造函数参数是一张gif动图
+    QMovie *qom=new QMovie("");
+    ui->label_4->setMovie(qom);
+    qom->start();
+    ui->label_4->setScaledContents(true);
+
+    ui->labelUrl->setText("<h1><a hrfe=\"http://www.baidu.com\"></a></h1>");
+    ui->labelUrl->setOpenExternalLinks(true);
+
+    ui->lcdNumber->display(123);
+
+    ui->progressBar->setMinimum(0);
+    ui->progressBar->setMaximum(100);
+    ui->progressBar->setValue(90);
 }
 
 MainWindow::~MainWindow()

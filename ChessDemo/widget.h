@@ -1,4 +1,4 @@
-#ifndef WIDGET_H
+﻿#ifndef WIDGET_H
 #define WIDGET_H
 
 #include <QWidget>
@@ -14,9 +14,18 @@ class Widget : public QWidget
 public:
     explicit Widget(QWidget *parent = nullptr);
     ~Widget();
+protected:
+    void paintEvent(QPaintEvent *e);
+    void mousePressEvent(QMouseEvent *e);
 
 private:
     Ui::Widget *ui;
+    int gridW;
+    int gridH;
+    int startX;
+    int startY;
+    int chessX;
+    int chessY;
 };
 
 #endif // WIDGET_H
